@@ -1,5 +1,6 @@
 import { getDashboardData } from '../lib/data';
 import ReachChart from './ReachChart';
+import Nav from './Nav';
 
 export const dynamic = 'force-dynamic';
 
@@ -43,6 +44,7 @@ export default async function Page() {
             ไว้ในที่เดียว
           </div>
         </div>
+        <Nav active="overview" />
       </header>
 
       {/* Illumination — annual reach vs goal */}
