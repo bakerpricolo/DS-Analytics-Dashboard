@@ -32,7 +32,7 @@ export default async function Page() {
         <div className="masthead-inner">
           <div>
             <div className="eyebrow">Content Insight · 2025–2026</div>
-            <h1>Reach &amp; <em>Resonance</em></h1>
+            <h1>Thailand Digital Strategies <em>Command Center</em></h1>
             <div className={`source-tag`}>
               <span className={`source-dot ${d.source === 'demo' ? 'demo' : ''}`} />
               {d.source === 'supabase' ? 'Live · Supabase' : 'Demo · imported data'}

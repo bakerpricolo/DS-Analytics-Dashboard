@@ -1,7 +1,7 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Insight — Content Analytics',
+  title: 'Thailand Digital Strategies Command Center',
   description: 'Reach, views, and engagement across Facebook, Instagram, YouTube, and TikTok',
 };
 

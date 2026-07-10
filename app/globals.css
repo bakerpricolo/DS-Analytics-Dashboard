@@ -1,22 +1,24 @@
 :root {
-  /* Palette — illuminated manuscript: parchment ground, iron-gall ink, indigo, gold leaf */
-  --parchment:   #F3ECDD;
-  --parchment-2: #EAE0CB;
-  --ink:         #21201C;
-  --ink-soft:    #4A4640;
-  --indigo:      #2A3352;
-  --indigo-2:    #3D4870;
-  --gold:        #B98A2E;
-  --gold-light:  #D9AF54;
-  --rubric:      #9B3B2E;   /* rubrication red, used sparingly */
-  --line:        #D5C8AC;
-  --card:        #FBF6EA;
+  /* Palette — modern dark: near-black ground, zinc cards, vivid accents */
+  --parchment:   #09090B;   /* background */
+  --parchment-2: #27272A;   /* elevated / track fill */
+  --ink:         #FAFAFA;   /* primary text */
+  --ink-soft:    #A1A1AA;   /* muted text */
+  --indigo:      #3B82F6;   /* primary (blue) */
+  --indigo-2:    #22D3EE;   /* secondary (cyan) */
+  --gold:        #FACC15;   /* warning/goal (yellow) */
+  --gold-light:  #FDE047;
+  --rubric:      #8B5CF6;   /* accent (violet), used for emphasis */
+  --success:     #22C55E;
+  --danger:      #EF4444;
+  --line:        #27272A;   /* borders */
+  --card:        #18181B;   /* card surface */
 
-  /* Platform hues, muted to sit in the palette */
-  --fb:      #3b5a8c;
-  --ig:      #a8446b;
-  --yt:      #9b3b2e;
-  --tiktok:  #2f6b63;
+  /* Platform hues, mapped onto the accent palette for contrast on dark */
+  --fb:      #3B82F6;   /* blue */
+  --ig:      #8B5CF6;   /* violet */
+  --yt:      #EF4444;   /* red */
+  --tiktok:  #22D3EE;   /* cyan */
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Sarabun', system-ui, sans-serif;
@@ -31,8 +33,8 @@ body {
   font-family: var(--font-body);
   background-color: var(--parchment);
   background-image:
-    radial-gradient(circle at 15% 12%, rgba(185,138,46,0.05), transparent 40%),
-    radial-gradient(circle at 85% 8%, rgba(42,51,82,0.05), transparent 35%);
+    radial-gradient(circle at 15% 12%, rgba(59,130,246,0.08), transparent 42%),
+    radial-gradient(circle at 85% 8%, rgba(139,92,246,0.07), transparent 38%);
   color: var(--ink);
   line-height: 1.5;
   min-height: 100vh;
@@ -121,7 +123,7 @@ body {
 }
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  background: linear-gradient(90deg, var(--success), #4ADE80);
   border-radius: 6px 0 0 6px;
 }
 .progress-meta { display: flex; justify-content: space-between; font-size: 12.5px; color: var(--ink-soft); font-family: var(--font-mono); }
@@ -144,7 +146,7 @@ body {
 .pf-name { display: flex; align-items: center; gap: 9px; font-weight: 600; font-size: 14px; }
 .pf-swatch { width: 11px; height: 11px; border-radius: 2px; }
 .pf-track { height: 26px; background: var(--parchment-2); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; position: relative; }
-.pf-fill { height: 100%; opacity: 0.88; }
+.pf-fill { height: 100%; opacity: 1; }
 .pf-val { font-family: var(--font-mono); font-size: 13px; color: var(--ink); min-width: 96px; text-align: right; }
 .pf-val .muted { color: var(--ink-soft); }
 
@@ -161,7 +163,7 @@ body {
 .fmt-name { font-weight: 600; font-size: 15px; }
 .fmt-name .cnt { font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft); margin-left: 8px; }
 .fmt-bar-track { grid-column: 1 / -1; height: 6px; background: var(--parchment-2); border-radius: 3px; overflow: hidden; }
-.fmt-bar-fill { height: 100%; background: var(--indigo); opacity: 0.8; }
+.fmt-bar-fill { height: 100%; background: var(--indigo); opacity: 1; }
 .fmt-val { font-family: var(--font-mono); font-size: 13px; }
 
 /* ---------- Top content list ---------- */
