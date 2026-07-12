@@ -9,6 +9,9 @@ export default function Nav({ active }) {
       <Link href="/insights" className={active === 'insights' ? 'navlink active' : 'navlink'}>
         กลยุทธ์ · Strategy Insights
       </Link>
+      <Link href="/signals" className={active === 'signals' ? 'navlink active' : 'navlink'}>
+        สัญญาณ · Content Signals
+      </Link>
     </nav>
   );
 }
