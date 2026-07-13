@@ -1,4 +1,4 @@
-import Nav from '../Nav';
+import Sidebar from '../Sidebar';
 import { signals } from '../../lib/insights';
 import scatter from '../../lib/scatter.json';
 import {
@@ -14,24 +14,17 @@ export default function SignalsPage() {
   const s = signals;
 
   return (
-    <div className="wrap">
-      <header className="masthead">
-        <div className="masthead-inner">
+    <div className="shell">
+      <Sidebar active="signals" />
+      <main className="main">
+        <div className="page-top">
           <div>
-            <div className="eyebrow">Content Signals · 2025–2026</div>
-            <h1>What Viewers <em>Actually Respond To</em></h1>
-            <div className="source-tag">
-              <span className="source-dot" />
-              Title &amp; content analysis · 212 pieces
-            </div>
+            <div className="crumb">Analytics / <b>Content Signals</b></div>
+            <div className="page-h1">What Viewers <em>Actually Respond To</em></div>
+            <div className="page-sub">เจาะลึกว่าอะไรทำให้คอนเทนต์เข้าถึงคนได้มากขึ้น — หัวข้อแบบไหน คนแบบไหน เนื้อหาแบบไหน ที่อัลกอริทึมดันและคนกดแชร์</div>
           </div>
-          <div className="sub">
-            เจาะลึกว่าอะไรทำให้คอนเทนต์เข้าถึงคนได้มากขึ้น —
-            หัวข้อแบบไหน คนแบบไหน เนื้อหาแบบไหน ที่อัลกอริทึมดันและคนกดแชร์
-          </div>
+          <div className="date-pill">212 pieces</div>
         </div>
-        <Nav active="signals" />
-      </header>
 
       {/* The Live Cut headline */}
       <section className="section">
@@ -232,16 +225,17 @@ export default function SignalsPage() {
         </div>
       </section>
 
-      <footer className="foot">
-        <div>
-          <div className="mono">CONTENT SIGNALS &amp; STRATEGY</div>
-          <div style={{ marginTop: 4 }}>วิเคราะห์หัวข้อและเนื้อหา · 2025–2026</div>
-        </div>
-        <div className="mono" style={{ textAlign: 'right' }}>
-          LIVE CUT = 49% OF REACH<br />
-          FROM 25% OF CONTENT
-        </div>
-      </footer>
+        <footer className="page-foot">
+          <div>
+            <div className="mono">CONTENT SIGNALS &amp; STRATEGY</div>
+            <div style={{ marginTop: 4 }}>วิเคราะห์หัวข้อและเนื้อหา · 2025–2026</div>
+          </div>
+          <div className="mono" style={{ textAlign: 'right' }}>
+            LIVE CUT = 49% OF REACH<br />
+            FROM 25% OF CONTENT
+          </div>
+        </footer>
+      </main>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import Nav from '../Nav';
+import Sidebar from '../Sidebar';
 import { insights } from '../../lib/insights';
 import { FormatEfficiencyChart, AprilProofChart } from '../InsightCharts';
 
@@ -26,24 +26,17 @@ export default function InsightsPage() {
   const maxCross = Math.max(...i.crossPost.map((c) => c.reach));
 
   return (
-    <div className="wrap">
-      <header className="masthead">
-        <div className="masthead-inner">
+    <div className="shell">
+      <Sidebar active="insights" />
+      <main className="main">
+        <div className="page-top">
           <div>
-            <div className="eyebrow">Strategy Insights · 2025–2026</div>
-            <h1>What the Data <em>Is Telling Us</em></h1>
-            <div className="source-tag">
-              <span className="source-dot" />
-              7 findings · from 214 content pieces
-            </div>
+            <div className="crumb">Analytics / <b>Strategy Insights</b></div>
+            <div className="page-h1">What the Data <em>Is Telling Us</em></div>
+            <div className="page-sub">บทวิเคราะห์เชิงกลยุทธ์ · 7 findings จากผลงานคอนเทนต์ทั้งปี เพื่อวางแผนการผลิตในปีถัดไป</div>
           </div>
-          <div className="sub">
-            บทวิเคราะห์เชิงกลยุทธ์ · จากผลงานคอนเทนต์ทั้งปี
-            เพื่อวางแผนการผลิตในปีถัดไป
-          </div>
+          <div className="date-pill">7 findings</div>
         </div>
-        <Nav active="insights" />
-      </header>
 
       {/* The one-line thesis */}
       <section className="section">
@@ -245,16 +238,17 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      <footer className="foot">
-        <div>
-          <div className="mono">STRATEGY INSIGHTS</div>
-          <div style={{ marginTop: 4 }}>วิเคราะห์จากข้อมูล 2025–2026 · {i.headline.totalContent} คอนเทนต์</div>
-        </div>
-        <div className="mono" style={{ textAlign: 'right' }}>
-          7 FINDINGS · 4 PLATFORMS<br />
-          {compact(i.headline.totalReach)} TOTAL REACH
-        </div>
-      </footer>
+        <footer className="page-foot">
+          <div>
+            <div className="mono">STRATEGY INSIGHTS</div>
+            <div style={{ marginTop: 4 }}>วิเคราะห์จากข้อมูล 2025–2026 · {i.headline.totalContent} คอนเทนต์</div>
+          </div>
+          <div className="mono" style={{ textAlign: 'right' }}>
+            7 FINDINGS · 4 PLATFORMS<br />
+            {compact(i.headline.totalReach)} TOTAL REACH
+          </div>
+        </footer>
+      </main>
     </div>
   );
 }
