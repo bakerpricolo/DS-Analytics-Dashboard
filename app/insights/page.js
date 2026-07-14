@@ -119,7 +119,7 @@ export default function InsightsPage() {
           <FormatEfficiencyChart data={i.formats} />
         </div>
         <p className="finding-note">
-          VDO reaches {n(56513)} per piece — but we made only 9. Graphics reaches {n(3494)} per piece —
+          VDO reaches {n(46447)} per piece — but we made only 11. Graphics reaches {n(3494)} per piece —
           and we made 35. The blue bars (power) run opposite to the yellow line (volume).
           Shifting production toward VDO and Reels raises reach with the same effort.
         </p>
